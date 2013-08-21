@@ -15,7 +15,9 @@ Admin page: find in views/lock/unlock
 This is where the admin can view the list of signups. I'm using the gem "Lock" to lock down the admin page unless you've got the password. To unlock the admin page visit: http://www.yoursitehere.com/lock/login
 
 The default password is "password". To change it, overwrite the password file using the following command:
+```ruby
 rails g lock:create_password_file yourpasswordhere
+```
 
 For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/
 
