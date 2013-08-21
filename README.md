@@ -6,6 +6,7 @@
 ## Get started
 1. Fork the repo
 2. run rake db:migrate
+3. Customize as needed
 
 =================
 
@@ -37,7 +38,8 @@ For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails
 
 We're using Twitter Bootstrap to add some simple styling. Add/remove/update as needed.
 
+=================
 
-To do: 
-- sharing ux
-- make it heroku ready
+## To do: 
+- finish up sharing ux
+- make it heroku ready and add instructions on how to deploy
