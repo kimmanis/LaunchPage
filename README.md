@@ -1,3 +1,5 @@
+# LaunchPage
+
 This is a quick and easy landing page that allows visitors to sign up for a pre-released product, share a custom URL and track how many invites they generated.
 
 The admin can see the full list of sign-ups and the number of sign-ups each visitor brought in at [domain]/users.
