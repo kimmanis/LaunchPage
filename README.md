@@ -3,8 +3,13 @@
 
 =================
 
-## What you need to modify:
+## Get started
+1. Fork the repo
+2. run rake db:migrate
 
+=================
+
+## How to customize
 
 **Homepage:** find in views/users/new
 
@@ -13,7 +18,7 @@ The homepage is a simple form only asking for the user's email address.
 
 **Confirmation/Share Page:** find in views/users/show
 
-This page confirms the user is signed up and offers share buttons with his/her trackable URL
+This page confirms the user is signed up and offers share buttons with his/her trackable URL. You may want to adjust the sharing buttons as needed.
 
 
 **Admin page:** find in views/lock/unlock
@@ -27,6 +32,10 @@ The default password is "password". To change it, overwrite the password file us
     
 
 For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/
+
+**Styling:** find in views/layouts/application
+
+We're using Twitter Bootstrap to add some simple styling. Add/remove/update as needed.
 
 
 To do: 

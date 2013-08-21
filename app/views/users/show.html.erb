@@ -1,18 +1,28 @@
+<h2>We got you!</h2>
+<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
 
+<% if @user.count %>
+<p>
+  You've referred <%= @user.count %> people! Sweet! </br>
+</p>
+<% end %>
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+  <b>Share this URL with your friends:</b>
+  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
+  
 </p>
 
 <p>
-  <b>Code:</b>
-  <%= "#{root_url}?code=#{@user.code}" %>
-</p>
-
-<p>
-  <b>Count:</b>
-  <%= @user.count %>
+<b>Share to your networks:</b>
+<!-- AddToAny BEGIN -->
+<a class="a2a_dd" href="http://www.addtoany.com/share_save?linkurl=myurl.com&amp;linkname="><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.linkurl = "<%= "#{root_url}?code=#{@user.code}" %>";
+</script>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 </p>
 
 
