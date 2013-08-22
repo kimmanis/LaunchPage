@@ -40,6 +40,12 @@ We're using Twitter Bootstrap to add some simple styling. Add/remove/update as n
 
 =================
 
+## How to deploy to Heroku
+
+This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain in the ass to set up locally.
+
+=================
+
 ## To do: 
 - finish up sharing ux
 - make it heroku ready and add instructions on how to deploy
