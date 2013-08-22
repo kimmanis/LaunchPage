@@ -49,11 +49,14 @@ This code uses SQLite for development but PostgreSQL for production. This is bec
 To create a new heroku site: 
     heroku apps:create exampleName
 
-Then deploy to heroku:
+Then deploy to heroku (make sure you've got stuff committed)
     git push heroku master
 
 Then set up the DB:
     heroku run rake db:migrate
+
+If the CSS isn't showing up correctly, you may want to precompile assets and push everything again
+    rake assets:precompile
 
 For more info on deploying to heroku: https://devcenter.heroku.com/articles/rails3
 
@@ -61,4 +64,3 @@ For more info on deploying to heroku: https://devcenter.heroku.com/articles/rail
 
 ## To do: 
 - finish up sharing ux
-- make it heroku ready and add instructions on how to deploy
