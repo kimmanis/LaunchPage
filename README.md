@@ -44,7 +44,18 @@ We're using Twitter Bootstrap to add some simple styling. Add/remove/update as n
 
 ## How to deploy to Heroku
 
-This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain in the ass to set up locally.
+This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain in the ass to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Check out https://devcenter.heroku.com/articles/quickstart for Heroku getting started tips.
+
+To create a new heroku site: 
+    heroku apps:create exampleName
+
+Then deploy to heroku:
+    git push heroku master
+
+Then set up the DB:
+    heroku run rake db:migrate
+
+For more info on deploying to heroku: https://devcenter.heroku.com/articles/rails3
 
 =================
 
