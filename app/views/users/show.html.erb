@@ -14,17 +14,15 @@
 </p>
 
 <p>
-<b>Share to your networks:</b>
-
-<!-- AddToAny BEGIN -->
-<a class="a2a_dd" href="http://www.addtoany.com/share_save?linkurl=myurl.com&amp;linkname="><img src="http://static.addtoany.com/buttons/share_save_171_16.png" width="171" height="16" border="0" alt="Share"/></a>
-<script type="text/javascript">
-var a2a_config = a2a_config || {};
-a2a_config.linkurl = "<%= "#{root_url}?code=#{@user.code}" %>";
-</script>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
+<b>Share to your networks:</b><br />
+  <a href="https://twitter.com/share?text=<%= "#{root_url}?code=#{@user.code}" %>" data-related="[username]" class="btn btn-default" target="_blank">Twitter</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{root_url}?code=#{@user.code}" %>" class="btn btn-default" target="_blank">Facebook</a>
+  <a href="https://plus.google.com/share?url=[URL]" onclick="javascript:window.open(this.href,
+    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default" target="_blank">Google+</a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//[url]&title=[title%20title]&summary=[summary%20summary]" class="btn btn-default" target="_blank">LinkedIn</a>
 </p>
+
+
 
 
 
