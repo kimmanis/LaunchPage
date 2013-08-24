@@ -1,7 +1,9 @@
 <div class="row">
   	<div class="col-lg-10 col-lg-offset-1">
+  		<!-- Confirmation and Incentive Copy -->
 		<h2>We got you!</h2>
 		<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
+		<!-- Confirmation and Incentive Copy -->
 		<p>
 			<% if @user.count %>
 			Your referrals: <%= @user.count %><br />
@@ -10,14 +12,16 @@
 			<% end %>
 		</p>
 		<p>
-		  <b>Referral URL:</b>
-		  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
+		 	<b>Referral URL:</b>
+		 	<input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
 		</p>
-		  <a href="https://twitter.com/intent/tweet?related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="_blank">Twitter</a>
-		  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "#{root_url}?code=#{@user.code}" %>&title=<%= ENV['TITLE'] %>&summary=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="blank">LinkedIn</a>
-		  <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn btn-default" target="_blank">Facebook</a>
-		  <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
-		    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default">Google+</a>
+		<!-- Share Buttons: Customize share copy from config/application.yml -->
+	    <a href="https://twitter.com/intent/tweet?related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="_blank">Twitter</a>
+	    <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "#{root_url}?code=#{@user.code}" %>&title=<%= ENV['TITLE'] %>&summary=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="blank">LinkedIn</a>
+	    <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn btn-default" target="_blank">Facebook</a>
+	    <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
+	    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default">Google+</a>
+	    <!-- End Share Buttons -->
 	</div>
 </div>
 

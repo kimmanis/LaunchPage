@@ -16,13 +16,16 @@ Below are two screenshots (homepage and sharing page) of [pressrm.com](http://ww
 5. Deploy
 
 ## Customization
+LaunchPage is designed to be a fully customizable landing page, so that it's unique to your site and delivers the highest conversion rates.
+
+### CSS
 LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the [ Bootstrap docs](http://getbootstrap.com/css/).
 
 ### Homepage
-The homepage is a simple form only asking for the user's email address and can be found at **views/users/new**
+The homepage is a simple form asking for the user's email address. This is the page users will see when they visit your site. It can be found at **views/users/new**
 
 ### Confirmation & Share Page:
-The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. it can be found at **views/users/show**
+The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. It can be found at **views/users/show**
 
 ### Admin page
 The admin page is where you can view how many people have registered and access their email address. You can edit this file at **views/lock/unlock** though you shouldn't need to.
@@ -32,8 +35,9 @@ To access registrations, visit http://www.yoursitehere.com/lock/login. The defau
 
 For more on lock can be found on the [lock gem website](http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/).
 
-### Styling
-**find in views/layouts/application**
+### Application
+Sitewide changes (such as the navigation bar), 
+**views/layouts/application**
 
 ### Config
 Open the **config/application.yml** file to change the following:
@@ -52,5 +56,5 @@ Then set up the database: <code>heroku run rake db:migrate</code>
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
 
-## License
-This code is released under the BLANK BLANK license. While not required, we do ask for a link back to this page, so others can discover and build upon the work.
+## License & Attribution
+This code is released under the [MIT License](http://choosealicense.com/licenses/mit/). Parts of this code may be covered under separate license. While not required, we do ask for a link on your land page back to this page, so others can discover and build upon the work.

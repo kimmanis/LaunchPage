@@ -10,10 +10,8 @@
 # GOOGLE ANALYTICS
 GOOGLE_ANALYTICS: UA-XXXXXXXX-X
 
-# SEARCH ENGINE META and SHARING
+# SEARCH ENGINE META AND SHARING
 TITLE: Page Title
 DESCRIPTION: Some descriptive text about this site
-URL: http://homepage.com
-LOGO_URL: http://homepage.com/logo.png
-SHARE_COPY: Sitename - some tagline. Signup today to be first in line #Must be less than 120 characters and is used for both Twitter and LinkedIn.
-TWITTER_HANDLE: kimmanis 
+SHARE_COPY: Sitename - some tagline. Signup today to be first in line #Should be less than 110 characters and is used for both Twitter and LinkedIn.
+TWITTER_HANDLE: kimmanis #Used for data-related in Twitter

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Meta Data can be added from config/application.yml -->
   <title><%= ENV['TITLE'] %></title>
   <meta name="description" content="<%= ENV['DESCRIPTION'] %>">
   <meta property="og:site_name" content="<%= ENV['TITLE'] %>"/>
   <meta property="og:url" content="<%= root_url %>"/>
+  <!-- End Meta Data -->
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>  
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
       <span class="sr-only">Toggle navigation</span>
@@ -22,18 +24,18 @@
     </button>
     <a class="navbar-brand" href="<%= root_url %>">LaunchPage</a>
   </div>
-
  <ul class="nav navbar-nav navbar-right">
       <li><a href="<%= "#{root_url}lock/login" %>">Admin</a></li>
   </ul>
 </nav>
+<!-- End Navigation Bar -->
 
 <div class="container">
 <%= yield %>
 </div>
 
+<!-- Google Analytics: Add UA code from config/application.yml -->
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<%= ENV['GOOGLE_ANALYTICS'] %>']);
   _gaq.push(['_trackPageview']);
@@ -43,8 +45,8 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
+<!-- End Google Analytics -->
 
 </body>
 </html>
