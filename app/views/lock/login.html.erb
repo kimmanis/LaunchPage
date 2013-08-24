@@ -1,6 +1,12 @@
-<b>Login to view the admin dashboard: </b>
-<div class="lock-login" id="lock-login-form">
-  <form accept-charset="UTF-8" action="<%= root_url %>/lock/unlock" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ch5GAIJSUvsKnlWMiUfAbpuai+s+9l9A4C/A+3tc/44=" /></div>
-    <input id="password" name="password" type="password" />
-    <input name="commit" type="submit" value="Unlock" />
-</form></div>
+<div class="row">
+  	<div class="col-lg-10 col-lg-offset-1">
+		<b>Login to view the admin dashboard: </b>
+		<div class="lock-login" id="lock-login-form">
+		  <form accept-charset="UTF-8" action="<%= root_url %>/lock/unlock" method="post">
+		  		<div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ch5GAIJSUvsKnlWMiUfAbpuai+s+9l9A4C/A+3tc/44=" /></div>
+		    	<input id="password" name="password" type="password" />
+		    	<input name="commit" type="submit" value="Unlock" />
+			</form>
+		</div>
+	</div>
+</div>

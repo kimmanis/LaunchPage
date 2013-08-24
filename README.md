@@ -25,7 +25,7 @@ The homepage is a simple form asking for the user's email address. This is the p
 ### Confirmation & Share Page:
 The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. It can be found at **views/users/show**
 
-### Admin page
+### Admin
 The admin page is where you can view how many people have registered and access their email address. You can edit this file at **views/lock/unlock** though you shouldn't need to.
 
 To access registrations, visit http://www.yoursitehere.com/lock/login. The default password is "password". To change it, overwrite the password file using the following command:
@@ -34,8 +34,7 @@ To access registrations, visit http://www.yoursitehere.com/lock/login. The defau
 For more on lock can be found on the [lock gem website](http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/).
 
 ### Application
-Sitewide changes (such as the navigation bar), 
-**views/layouts/application**
+Sitewide changes (such as the navigation bar), can be made from **views/layouts/application**
 
 ### Config
 Open the **config/application.yml** file to change the following:
@@ -43,7 +42,7 @@ Open the **config/application.yml** file to change the following:
 - SEO meta information (e.g. description)
 - Facebook meta and social sharing (e.g. share copy and Twitter handle)
 
-## Deploying to Heroku
+## Deploying
 This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Detailed instructions can be found in the [Heroku getting started guide](https://devcenter.heroku.com/articles/rails3).
 
 To create a new heroku site: <code>heroku apps:create exampleName</code>
