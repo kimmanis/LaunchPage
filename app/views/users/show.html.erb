@@ -1,28 +1,20 @@
-<h2>We got you!</h2>
-<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
-
-<% if @user.count %>
-<p>
-  You've referred <%= @user.count %> people! Sweet! </br>
-</p>
-<% end %>
-
-<p>
-  <b>Share this URL with your friends:</b>
-  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
-  
-</p>
-
-<p>
-<b>Share to your networks:</b><br />
-  <a href="https://twitter.com/share?text=<%= "#{root_url}?code=#{@user.code}" %>" data-related="[username]" class="btn btn-default" target="_blank">Twitter</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{root_url}?code=#{@user.code}" %>" class="btn btn-default" target="_blank">Facebook</a>
-  <a href="https://plus.google.com/share?url=[URL]" onclick="javascript:window.open(this.href,
-    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default" target="_blank">Google+</a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//[url]&title=[title%20title]&summary=[summary%20summary]" class="btn btn-default" target="_blank">LinkedIn</a>
-</p>
-
-
-
+<div class="row">
+  	<div class="col-lg-10 col-lg-offset-1">
+		<h2>We got you!</h2>
+		<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
+		<p>
+			<% if @user.count %>
+			Your referrals: <%= @user.count %><br />
+			<% else %>
+			You haven't referred anyone yet.<br />
+			<% end %>
+		</p>
+		<p>
+		  <b>Referral URL:</b>
+		  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
+		</p>
+		[add share buttons]
+	</div>
+</div>
 
 
