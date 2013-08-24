@@ -26,9 +26,9 @@ The confirmation and share page shows immediately after the user has provided th
 The admin page is where you can view how many people have registered and access their email address. You can edit this file at **views/lock/unlock** though you shouldn't need to.
 
 To access registrations, visit http://www.yoursitehere.com/lock/login. The default password is "password". To change it, overwrite the password file using the following command:
-    rails g lock:create_password_file yourpasswordhere
+     <code>rails g lock:create_password_file yourpasswordhere</code>
 
-For more on lock can be found at: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/
+For more on lock can be found on [the lock gem website](http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/).
 
 ### Styling
 **find in views/layouts/application**
@@ -44,17 +44,13 @@ Open the config/application.yml file to change the following
 ## Deploying to Heroku
 This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Those instructions can be found at https://devcenter.heroku.com/articles/quickstart.
 
-To create a new heroku site:
-    heroku apps:create exampleName
+To create a new heroku site: <code>heroku apps:create exampleName</code>
 
-Then deploy to heroku (ensure changes already committed)
-    git push heroku master
+Then deploy to heroku (ensure changes already committed): <code>git push heroku master</code>
 
-Then set up the database:
-    heroku run rake db:migrate
+Then set up the database: <code>heroku run rake db:migrate</code>
 
-If the CSS isn't showing up correctly, you may want to precompile assets and push everything again
-    rake assets:precompile
+If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
 
 For more info on deploying to heroku: https://devcenter.heroku.com/articles/rails3
 
