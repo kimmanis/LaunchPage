@@ -1,6 +1,9 @@
 # LaunchPage
 **This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated. The admin can see the full list of sign-ups and the number of sign-ups each visitor brought in.**
 
+
+![ScreenShot](http://assets.betali.st/startups/8509/image/big_Screen_Shot_2013-08-23_at_3.38.43_PM.png)
+
 =================
 
 ## Getting Started
@@ -9,8 +12,6 @@
 3. Customize UI as needed, more information below
 4. Change admin password
 5. Deploy
-
-=================
 
 ## Customization
 LaunchPage is built on Bootstrap. More information on site structure and css settings can be found at http://getbootstrap.com/css/.
@@ -32,7 +33,7 @@ For more on lock can be found at: http://www.cowboycoded.com/2011/04/11/lock-dow
 ### Styling
 **find in views/layouts/application**
 
-## Config - 
+## Config
 Open the config/application.yml file to change the following 
 - Google analytics 
 - SEO meta information (e.g. Description)
