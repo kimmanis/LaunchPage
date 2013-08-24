@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem "better_errors", ">= 0.6.0", :group => :development
 
 gem 'lock'
+gem 'figaro'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

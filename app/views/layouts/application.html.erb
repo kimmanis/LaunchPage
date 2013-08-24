@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title><%= ENV['TITLE'] %></title>
+  <meta name="description" content="<%= ENV['DESCRIPTION'] %>">
+  <meta property="og:site_name" content="<%= ENV['TITLE'] %>"/>
+  <meta property="og:url" content="<%= ENV['URL'] %>"/>
+  <meta property="og:image" content="<%= ENV['LOGO_URL'] %>"/>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body>  
 
 <nav class="navbar navbar-default" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,7 +36,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '<%= ENV["GOOGLE_ANALYTICS"] %>']);
+  _gaq.push(['_setAccount', '<%= ENV['GOOGLE_ANALYTICS'] %>']);
   _gaq.push(['_trackPageview']);
 
   (function() {

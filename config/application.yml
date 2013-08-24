@@ -6,5 +6,14 @@
 # GMAIL_USERNAME: Your_Gmail_Username
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 # Add application configuration variables here, as shown below.
-#
-GOOGLE_ANALYTICS: UA-38340248-1
+
+# GOOGLE ANALYTICS
+GOOGLE_ANALYTICS: UA-XXXXXXXX-X
+
+# SEARCH ENGINE META and SHARING
+TITLE: Page Title
+DESCRIPTION: Some descriptive text about this site
+URL: http://homepage.com
+LOGO_URL: http://homepage.com/logo.png
+SHARE_COPY: Sitename - some tagline. Signup today to be first in line #Must be less than 120 characters and is used for both Twitter and LinkedIn.
+TWITTER_HANDLE: kimmanis 

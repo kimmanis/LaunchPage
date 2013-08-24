@@ -1,5 +1,5 @@
 # LaunchPage
-**This is a quick and easy landing page that allows visitors to sign up for a pre-released product, share a custom URL and track how many invites they generated. The admin can see the full list of sign-ups and the number of sign-ups each visitor brought in.**
+**This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated. The admin can see the full list of sign-ups and the number of sign-ups each visitor brought in.**
 
 =================
 
@@ -40,9 +40,11 @@ For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails
 
 We're using Twitter Bootstrap to add some simple styling. Add/remove/update as needed.
 
-## Google Analytics
-
-Just change your GA ID in the config/application.yml file. The GA tracking code is already included in the views/layoutsapplication.html.erb file.
+## Config - 
+Open the config/application.yml file to change the following 
+- Google Analytics
+- SEO Meta
+- Facebook Meta
 
 =================
 
