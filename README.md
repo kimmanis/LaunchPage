@@ -40,6 +40,10 @@ For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails
 
 We're using Twitter Bootstrap to add some simple styling. Add/remove/update as needed.
 
+## Google Analytics
+
+Just change your GA ID in the config/application.yml file. The GA tracking code is already included in the views/layoutsapplication.html.erb file.
+
 =================
 
 ## How to deploy to Heroku
