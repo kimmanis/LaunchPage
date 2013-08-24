@@ -3,18 +3,11 @@
 
 Developed and maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
 
+## Screenshots
+Below are two screenshots - homepage and sharing page - of [pressrm.com](http://www.pressrm.com/), a site that was built using LaunchPage.
+[![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com)
 
-
-
-
-[![ScreenShot](http://i.imgur.com/Jmw8MkK.jpg)](http://www.pressrm.com).
-
-[![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com).
-
-[![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com).
-
-
-=================
+[![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com)
 
 ## Getting Started
 1. Fork the repo
