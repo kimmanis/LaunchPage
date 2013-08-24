@@ -13,8 +13,7 @@
 		  <b>Referral URL:</b>
 		  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
 		</p>
-		  <a href="https://twitter.com/intent/tweet?counturl=http://wwww.pressrm.com/&related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="_blank">Twitter</a>
-
+		  <a href="https://twitter.com/intent/tweet?related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="_blank">Twitter</a>
 		  <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "#{root_url}?code=#{@user.code}" %>&title=<%= ENV['TITLE'] %>&summary=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="blank">LinkedIn</a>
 		  <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn btn-default" target="_blank">Facebook</a>
 		  <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
