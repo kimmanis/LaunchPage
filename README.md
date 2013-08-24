@@ -1,9 +1,7 @@
 # LaunchPage
-**This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated.**
+**This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated.** LaunchPage was developed and is maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
 
-Developed and maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
-
-Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/), a site that was built using LaunchPage.
+Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/), a site that was built using the LaunchPage, with some basic CSS modifications:
 [![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com)
 
 [![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com)
