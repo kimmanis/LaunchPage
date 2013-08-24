@@ -24,7 +24,7 @@ LaunchPage is built on Bootstrap. More information on site structure and css set
 ### Homepage
 The homepage is a simple form only asking for the user's email address and can be found at **views/users/new**
 
-### Confirmation/ Share Page:
+### Confirmation & Share Page:
 The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. it can be found at **views/users/show**
 
 ### Admin page
@@ -38,13 +38,11 @@ For more on lock can be found on the [lock gem website](http://www.cowboycoded.c
 ### Styling
 **find in views/layouts/application**
 
-## Config
+### Config
 Open the **config/application.yml** file to change the following:
 - Google analytics (e.g. UA-)
 - SEO meta information (e.g. description)
 - Facebook meta and social sharing (e.g. share copy and Twitter handle)
-
-=================
 
 ## Deploying to Heroku
 This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Detailed instructions can be found in the [Heroku getting started guide](https://devcenter.heroku.com/articles/rails3).
@@ -56,8 +54,6 @@ Then deploy to heroku (ensure changes already committed): <code>git push heroku 
 Then set up the database: <code>heroku run rake db:migrate</code>
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
-
-=================
 
 ## License
 This code is released under the BLANK BLANK license. While not required, we do ask for a link back to this page, so others can discover and build upon the work.
