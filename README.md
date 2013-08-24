@@ -4,7 +4,7 @@
 Developed and maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
 
 ## Screenshots
-Below are two screenshots - homepage and sharing page - of [pressrm.com](http://www.pressrm.com/), a site that was built using LaunchPage.
+Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/), a site that was built using LaunchPage.
 [![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com)
 
 [![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com)
@@ -15,6 +15,8 @@ Below are two screenshots - homepage and sharing page - of [pressrm.com](http://
 3. Customize UI as needed, more information below
 4. Change admin password
 5. Deploy
+
+=================
 
 ## Customization
 LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the [ Bootstrap docs](http://getbootstrap.com/css/).
@@ -37,15 +39,15 @@ For more on lock can be found on the [lock gem website](http://www.cowboycoded.c
 **find in views/layouts/application**
 
 ## Config
-Open the config/application.yml file to change the following 
-- Google analytics 
-- SEO meta information (e.g. Description)
+Open the **config/application.yml** file to change the following:
+- Google analytics (e.g. UA-)
+- SEO meta information (e.g. description)
 - Facebook meta and social sharing (e.g. share copy and Twitter handle)
 
 =================
 
 ## Deploying to Heroku
-This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Those instructions can be found at https://devcenter.heroku.com/articles/quickstart.
+This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Detailed instructions can be found in the [Heroku getting started guide](https://devcenter.heroku.com/articles/rails3).
 
 To create a new heroku site: <code>heroku apps:create exampleName</code>
 
@@ -55,5 +57,7 @@ Then set up the database: <code>heroku run rake db:migrate</code>
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
 
-For more info on deploying can be found in the [Heroku getting started guide](https://devcenter.heroku.com/articles/rails3).
+=================
 
+## License
+This code is released under the BLANK BLANK license. While not required, we do ask for a link back to this page, so others can discover and build upon the work.
