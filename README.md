@@ -3,20 +3,17 @@
 
 Developed and maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
 
-## Screenshots
 Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/), a site that was built using LaunchPage.
 [![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com)
 
 [![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com)
 
-## Getting Started
+### Getting Started
 1. Fork the repo
 2. Run rake db:migrate
 3. Customize UI as needed, more information below
 4. Change admin password
 5. Deploy
-
-=================
 
 ## Customization
 LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the [ Bootstrap docs](http://getbootstrap.com/css/).
