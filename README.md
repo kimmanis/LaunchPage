@@ -14,7 +14,7 @@
 5. Deploy
 
 ## Customization
-LaunchPage is built on Bootstrap. More information on site structure and css settings can be found at http://getbootstrap.com/css/.
+LaunchPage is built on Bootstrap. More information on site structure and css settings can be found on [the Bootstrap website](http://getbootstrap.com/css/).
 
 ### Homepage
 The homepage is a simple form only asking for the user's email address and can be found at **views/users/new**
