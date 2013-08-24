@@ -3,69 +3,56 @@
 
 =================
 
-## Get started
+## Getting Started
 1. Fork the repo
-2. run rake db:migrate
-3. Customize as needed
+2. Run rake db:migrate
+3. Customize UI as needed, more information below
+4. Change admin password
+5. Deploy
 
 =================
 
-## How to customize
+## Customization
+LaunchPage is built on Bootstrap. More information on site structure and css settings can be found at http://getbootstrap.com/css/.
 
 ### Homepage
-**find in views/users/new**
+The homepage is a simple form only asking for the user's email address and can be found at **views/users/new**
 
-The homepage is a simple form only asking for the user's email address.
-
-### Confirmation/Share Page:
-**find in views/users/show**
-
-This page confirms the user is signed up and offers share buttons with his/her trackable URL. You may want to adjust the sharing buttons as needed.
+### Confirmation/ Share Page:
+The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. it can be found at **views/users/show**
 
 ### Admin page
-**find in views/lock/unlock**
+The admin page is where you can view how many people have registered and access their email address. You can edit this file at **views/lock/unlock** though you shouldn't need to.
 
-This is where the admin can view the list of signups. I'm using the gem "Lock" to lock down the admin page unless you've got the password. To unlock the admin page visit: http://www.yoursitehere.com/lock/login
-
-The default password is "password". To change it, overwrite the password file using the following command:
-
-    
+To access registrations, visit http://www.yoursitehere.com/lock/login. The default password is "password". To change it, overwrite the password file using the following command:
     rails g lock:create_password_file yourpasswordhere
-    
 
-For more on lock, visit: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/
+For more on lock can be found at: http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/
 
 ### Styling
 **find in views/layouts/application**
 
-We're using Twitter Bootstrap to add some simple styling. Add/remove/update as needed.
-
 ## Config - 
 Open the config/application.yml file to change the following 
-- Google Analytics
-- SEO Meta
-- Facebook Meta
+- Google analytics 
+- SEO meta information (e.g. Description)
+- Facebook meta and social sharing (e.g. share copy and Twitter handle)
 
 =================
 
-## How to deploy to Heroku
+## Deploying to Heroku
+This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Those instructions can be found at https://devcenter.heroku.com/articles/quickstart.
 
-This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain in the ass to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Check out https://devcenter.heroku.com/articles/quickstart for Heroku getting started tips.
-
-To create a new heroku site: 
-
+To create a new heroku site:
     heroku apps:create exampleName
 
-Then deploy to heroku (make sure you've got stuff committed)
-
+Then deploy to heroku (ensure changes already committed)
     git push heroku master
 
-Then set up the DB:
-
+Then set up the database:
     heroku run rake db:migrate
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again
-
     rake assets:precompile
 
 For more info on deploying to heroku: https://devcenter.heroku.com/articles/rails3
