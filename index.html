@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Launchpage by kimmanis</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Launchpage</h1>
+        <h2>An easy landing page to collect signups and allow visitors to share a trackable URL</h2>
+        <a href="https://github.com/kimmanis/LaunchPage" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="launchpage" class="anchor" href="#launchpage"><span class="octicon octicon-link"></span></a>LaunchPage</h1>
+
+<p><strong>This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated.</strong> LaunchPage was developed and is maintained by <a href="https://twitter.com/kimmanis">@kimmanis</a> and <a href="https://twitter.com/drigotti">@drigotti</a>.</p>
+
+<p>Below are two screenshots (homepage and sharing page) of <a href="http://www.pressrm.com/">pressrm.com</a>, a site that was built using the LaunchPage, with some basic CSS modifications:
+<a href="http://www.pressrm.com"><img src="http://i.imgur.com/Kc9SIwf.png" alt="ScreenShot"></a></p>
+
+<p><a href="http://www.pressrm.com"><img src="http://i.imgur.com/EPDOhcB.png" alt="ScreenShot"></a></p>
+
+<h3>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
+
+<ol>
+<li>Fork the repo</li>
+<li>Run rake db:migrate</li>
+<li>Customize UI as needed, more information below</li>
+<li>Change admin password</li>
+<li>Deploy</li>
+</ol><h2>
+<a name="customization" class="anchor" href="#customization"><span class="octicon octicon-link"></span></a>Customization</h2>
+
+<p>LaunchPage is designed to be a fully customizable landing page, so that it's unique to your site and delivers the highest conversion rates.</p>
+
+<h3>
+<a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h3>
+
+<p>LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the <a href="http://getbootstrap.com/css/"> Bootstrap docs</a>.</p>
+
+<h3>
+<a name="homepage" class="anchor" href="#homepage"><span class="octicon octicon-link"></span></a>Homepage</h3>
+
+<p>The homepage is a simple form asking for the user's email address. This is the page users will see when they visit your site. It can be found at <strong>views/users/new</strong></p>
+
+<h3>
+<a name="confirmation--share-page" class="anchor" href="#confirmation--share-page"><span class="octicon octicon-link"></span></a>Confirmation &amp; Share Page:</h3>
+
+<p>The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL and share buttons. It can be found at <strong>views/users/show</strong></p>
+
+<h3>
+<a name="admin" class="anchor" href="#admin"><span class="octicon octicon-link"></span></a>Admin</h3>
+
+<p>The admin page is where you can view how many people have registered and access their email address. You can edit this file at <strong>views/lock/unlock</strong> though you shouldn't need to.</p>
+
+<p>To access registrations, visit <a href="http://www.yoursitehere.com/lock/login">http://www.yoursitehere.com/lock/login</a>. The default password is "password". To change it, overwrite the password file using the following command:
+     <code>rails g lock:create_password_file yourpasswordhere</code></p>
+
+<p>For more on lock can be found on the <a href="http://www.cowboycoded.com/2011/04/11/lock-down-a-rails-3-app-with-a-single-password-using-lock/">lock gem website</a>.</p>
+
+<h3>
+<a name="application" class="anchor" href="#application"><span class="octicon octicon-link"></span></a>Application</h3>
+
+<p>Sitewide changes (such as the navigation bar), can be made from <strong>views/layouts/application</strong></p>
+
+<h3>
+<a name="config" class="anchor" href="#config"><span class="octicon octicon-link"></span></a>Config</h3>
+
+<p>Open the <strong>config/application.yml</strong> file to change the following:</p>
+
+<ul>
+<li>Google analytics (e.g. UA-)</li>
+<li>SEO meta information (e.g. description)</li>
+<li>Facebook meta and social sharing (e.g. share copy and Twitter handle)</li>
+</ul><h2>
+<a name="deploying" class="anchor" href="#deploying"><span class="octicon octicon-link"></span></a>Deploying</h2>
+
+<p>This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Detailed instructions can be found in the <a href="https://devcenter.heroku.com/articles/rails3">Heroku getting started guide</a>.</p>
+
+<p>To create a new heroku site: <code>heroku apps:create exampleName</code></p>
+
+<p>Then deploy to heroku (ensure changes already committed): <code>git push heroku master</code></p>
+
+<p>Then set up the database: <code>heroku run rake db:migrate</code></p>
+
+<p>If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code></p>
+
+<h2>
+<a name="license--attribution" class="anchor" href="#license--attribution"><span class="octicon octicon-link"></span></a>License &amp; Attribution</h2>
+
+<p>This code is released under the <a href="http://choosealicense.com/licenses/mit/">MIT License</a>. Parts of this code may be covered under separate license. While not required, we do ask for a link on your land page back to this page, so others can discover and build upon the work.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/kimmanis/LaunchPage/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/kimmanis/LaunchPage/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/kimmanis/LaunchPage"></a> is maintained by <a href="https://github.com/kimmanis">kimmanis</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
