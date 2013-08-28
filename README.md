@@ -1,10 +1,10 @@
 # LaunchPage
 **This is a quick and easy viral landing page that allows visitors to sign up, share a custom URL, and track how many referals they generated.** LaunchPage was developed and is maintained by [@kimmanis](https://twitter.com/kimmanis) and [@drigotti](https://twitter.com/drigotti).
 
-Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/), a site that was built using the LaunchPage, with some basic CSS modifications:
-[![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com)
+Below are two screenshots (homepage and sharing page) of [pressrm.com](http://www.pressrm.com/?code=HjayII), a site that was built using the LaunchPage, with some basic CSS modifications:
+[![ScreenShot](http://i.imgur.com/Kc9SIwf.png)](http://www.pressrm.com/?code=HjayII)
 
-[![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com)
+[![ScreenShot](http://i.imgur.com/EPDOhcB.png)](http://www.pressrm.com/?code=HjayII)
 
 ### Getting Started
 1. Fork the repo
@@ -52,6 +52,9 @@ Then deploy to heroku (ensure changes already committed): <code>git push heroku 
 Then set up the database: <code>heroku run rake db:migrate</code>
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
+
+## Ideas
+- Use [split gem](https://github.com/andrew/split) to add AB testing to your landing page.
 
 ## License & Attribution
 This code is released under the [MIT License](http://choosealicense.com/licenses/mit/). Parts of this code may be covered under separate license. While not required, we do ask for a link on your land page back to this page, so others can discover and build upon the work.
