@@ -45,7 +45,7 @@ Open the **config/application.yml** file to change the following:
 ## Deploying
 This code uses SQLite for development but PostgreSQL for production. This is because Heroku only supports PostgreSQL but it's a pain to set up locally. You need to have Heroku installed and set up already for all this goodness to work. Detailed instructions can be found in the [Heroku getting started guide](https://devcenter.heroku.com/articles/rails3).
 
-To create a new heroku site: <code>heroku apps:create exampleName</code>
+To create a new heroku site: <code>heroku create exampleName</code>
 
 Then deploy to heroku (ensure changes already committed): <code>git push heroku master</code>
 
@@ -54,7 +54,7 @@ Then set up the database: <code>heroku run rake db:migrate</code>
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
 
 ## Ideas
-- Use [split gem](https://github.com/andrew/split) to add AB testing to your landing page.
+- Use [split gem](https://github.com/andrew/split) to add AB testing to your landing page. 
 
 ## License & Attribution
 This code is released under the [MIT License](http://choosealicense.com/licenses/mit/). Parts of this code may be covered under separate license. While not required, we do ask for a link on your land page back to this page, so others can discover and build upon the work.
