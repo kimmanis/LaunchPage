@@ -10,43 +10,25 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 </head>
 <body>  
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="<%= root_url %>">LaunchPage</a>
-  </div>
- <ul class="nav navbar-nav navbar-right">
-      <li><a href="<%= "#{root_url}lock/login" %>">Admin</a></li>
-  </ul>
-</nav>
-<!-- End Navigation Bar -->
-
 <div class="container">
-<%= yield %>
+  <img alt="full screen background image" src="/assets/background.jpg" id="full-screen-background-image" /> 
+
+  <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+      <h1 class="text-center">Startup Name</h1>
+      <p class="lead text-center">tagline to wow visitors and get them to sign up</p>
+    </div>
+  </div>
+
+  <%= yield %>
+
 </div>
-
-<!-- Google Analytics: Add UA code from config/application.yml -->
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '<%= ENV['GOOGLE_ANALYTICS'] %>']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
-<!-- End Google Analytics -->
 
 </body>
 </html>

@@ -1,27 +1,72 @@
-<h1>Listing users</h1>
+<% @users = User.all %>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th>Code</th>
-    <th>Count</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="panel text-center">
+      <div id="registrations"></div>
+    </div>
+  </div>
+</div>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email %></td>
-    <td><%= user.code %></td>
-    <td><%= user.count %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<div class="row">
+  <div class="col-lg-2 col-lg-offset-3">
+    <div class="panel text-center">
+      <h1>X,XXX</h1>
+      <p>PAGEVIEWS</p>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="panel text-center">
+      <h1><%= User.all.count %></h1>
+      <p>REGISTRATIONS</p>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="panel text-center">
+      <h1>XX</h1>
+      <p>REFERRALS</p>
+    </div>
+  </div>
+</div>
 
-<br />
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <table class="table-hover table-striped users-table" cellpadding="5px" style="width:100%;">
+        <p>
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Referrals</th>
+              <th>Registered</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.count %></td>
+            <td><%= user.created_at.to_date %></td>
+            <td><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </table>
+      </p>
+    </div>
+</div>
 
-<%= link_to 'New User', new_user_path %>
+<script>
+Morris.Line({
+  element: 'registrations',
+  data: [
+    { y: '2006', a: 100},
+    { y: '2007', a: 75},
+    { y: '2008', a: 50},
+    { y: '2009', a: 75},
+    { y: '2010', a: 50},
+    { y: '2011', a: 75},
+    { y: '2012', a: 100}
+  ],
+  xkey: 'y',
+  ykeys: ['a'],
+});
+</script>

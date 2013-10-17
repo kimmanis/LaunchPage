@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    padding-top: 50px;
+    color: #000;
+}
+p {
+    font-size: 18px;
+}
+#full-screen-background-image {
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1200px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.btn.signup-button {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.signup-form {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.support-points {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.users-table {
+    background-color: #fff;
+}

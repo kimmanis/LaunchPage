@@ -11,12 +11,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <b>Tell us your email address:</b><br />
-    <%= f.text_field :email %>
+  <!-- Sign Up Form -->
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="input-group field">
+        <%= f.text_field :email, :class => "form-control signup-form", :placeholder => "Email address" %>
+        <%= f.hidden_field :code %>
+        <span class="input-group-btn">
+          <%= f.submit "Notify me", :class => "btn btn-success signup-button" %>
+        </span>
+      </div>
+    </div>
   </div>
-  <%= f.hidden_field :code %>
-  <div class="actions">
-    <%= f.submit "Submit" %>
-  </div>
+  <!-- End Sign Up Form -->
 <% end %>
+
+  <!-- Support Points -->
+  <div class="row support-points">
+    <div class="col-lg-10 col-lg-offset-1">
+      <div class="row support-points">
+        <div class="col-lg-4 text-center"><p class="text"><strong>Support #1</strong><br />More descriptive details on support point one.</p></div>
+        <div class="col-lg-4 text-center"><p class="text"><strong>Support #2</strong><br />More descriptive details on support point two.</p></div>
+        <div class="col-lg-4 text-center"><p class="text"><strong>Support #3</strong><br />More descriptive details on support point three.</p></div>
+      </div>
+    </div>
+  </div>
+  <!-- End Sign Up Form -->
+
+  <!-- Long Description -->
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis libero orci, at ultricies massa sodales eu. Praesent a elementum nisi. Suspendisse potenti. Ut ut auctor nulla. Quisque tempor fermentum magna ac consectetur. Integer vestibulum sit amet tellus eu semper.</p>
+    </div>
+  </div>
+  <!-- End Long Description -->
+
+
+
+

@@ -7,11 +7,9 @@
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 # Add application configuration variables here, as shown below.
 
-# GOOGLE ANALYTICS
-GOOGLE_ANALYTICS: UA-XXXXXXXX-X
 
-# SEARCH ENGINE META AND SHARING
-TITLE: Page Title
+# SEARCH ENGINE META AND OVERALL SITE
+TITLE: Startup name
 DESCRIPTION: Some descriptive text about this site
-SHARE_COPY: Sitename - some tagline. Signup today to be first in line #Should be less than 110 characters and is used for both Twitter and LinkedIn.
-TWITTER_HANDLE: kimmanis #Used for data-related in Twitter
+TWITTER_HANDLE: launchpageio #Used for data-related in Twitter
+

@@ -1,30 +1,18 @@
 <div class="row">
-  	<div class="col-lg-10 col-lg-offset-1">
+  	<div class="col-lg-6 col-lg-offset-3 text-center">
   		<!-- Confirmation and Incentive Copy -->
-		<h2>We got you!</h2>
-		<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
-		<!-- Confirmation and Incentive Copy -->
-		<p>
-			<% if @user.count %>
-			Your referrals: <%= @user.count %><br />
-			<% else %>
-			You haven't referred anyone yet.<br />
-			<% end %>
-		</p>
-		<p>
-		 	<b>Referral URL:</b>
-		 	<input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
-		</p>
-		<!-- Share Buttons: Customize share copy from config/application.yml -->
-	    <a href="https://twitter.com/intent/tweet?related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="_blank">Twitter</a>
-	    <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "#{root_url}?code=#{@user.code}" %>&title=<%= ENV['TITLE'] %>&summary=<%= ENV['SHARE_COPY'] %>" class="btn btn-default" target="blank">LinkedIn</a>
+		<p><i><strong>We got you, thanks for signing up!</i></strong> <% if @user.count %>Your referral count is <%= @user.count %>.<% else %>Help spread the word by sharing your unique referral URL below.<% end %></p>
+		<!-- End Confirmation and Incentive Copy -->
+
+		<!-- Referral URL -->
+		<p><input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>"></p>
+		<!-- End Referral URL -->
+
+		<!-- Sharing Buttons -->
+	    <a href="https://twitter.com/intent/tweet?related=<%= ENV['TWITTER_HANDLE'] %>&url=<%=u "#{root_url}?code=#{@user.code}"%>&text=I+just+signed+up+for+@<%= ENV['TWITTER_HANDLE'] %>.+Join+me+at" class="btn btn-default" target="_blank">Twitter</a>
 	    <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn btn-default" target="_blank">Facebook</a>
 	    <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
 	    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default">Google+</a>
-	    <!-- End Share Buttons -->
+	    <!-- End Sharing Buttons -->
 	</div>
 </div>
-
-
-
-
