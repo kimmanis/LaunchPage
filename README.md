@@ -18,15 +18,17 @@ Below are two screenshots (homepage and sharing page) of [pressrm.com](http://ww
 LaunchPage is designed to be a fully customizable landing page, so that it's unique to your site and delivers the highest conversion rates.
 
 ### Settings
-A couple of key settings, such as site / starup name can be made at **config/application.yml**.
+A couple of key settings, such as site / starup name can be made at **config/application.yml**. Start from here.
 
 ### CSS
-LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the [ Bootstrap docs](http://getbootstrap.com/css/). CSS that's specific to LaunchPage, for example the background image or sign up form can be found at **assets/stylesheets/launchpage.css**.
+LaunchPage is built on Bootstrap. More information on site structure and css settings can be found in the [ Bootstrap docs](http://getbootstrap.com/css/). CSS that's specific to LaunchPage, for example the sign up form styling, can be found at **assets/stylesheets/launchpage.css**.
+
+To change the background image, just replace "background.jpg" at **assets/images**. If the background image is another file name, for example background.png, simple edit line #20 at **views/layouts/application**.
 
 ### Homepage
 The homepage is a simple form asking for the user's email address along with supporting points. This is the page users will see when they visit your site. You can customize the content at **views/users/_form**.
 
-### Confirmation & Share Page:
+### Confirmation & Share Page
 The confirmation and share page shows immediately after the user has provided their email address. This page includes his/her trackable referral URL, share buttons, and text either askign him/her to share or the number of referrals if the URL has already driven one. It can be found at **views/users/show**.
 
 ### Admin
