@@ -52,6 +52,3 @@ Then deploy to heroku (ensure changes already committed to GitHub): <code>git pu
 Then set up the database: <code>heroku run rake db:migrate</code>
 
 If the CSS isn't showing up correctly, you may want to precompile assets and push everything again: <code>rake assets:precompile</code>
-
-## License & Attribution
-This code is released under the [MIT License](http://choosealicense.com/licenses/mit/). Parts of this code may be covered under separate license. While not required, we do ask for a link on your land page back to this page, so others can discover and build upon the work.
