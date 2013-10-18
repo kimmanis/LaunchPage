@@ -7,9 +7,7 @@
 # makes 'Your_Gmail_Username' available as ENV["GMAIL_USERNAME"]
 # Add application configuration variables here, as shown below.
 
-
-# SEARCH ENGINE META AND OVERALL SITE
-TITLE: Startup name
-DESCRIPTION: Some descriptive text about this site
-TWITTER_HANDLE: launchpageio #Used for data-related in Twitter
+TITLE: Startup name #Used as page title and SEO
+DESCRIPTION: Short descriptive text or tagline #Used as page tageline / description and SEO
+TWITTER_HANDLE: launchpageio #Used Twitter sharing
 

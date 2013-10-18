@@ -21,13 +21,12 @@
 
   <div class="row">
       <div class="col-lg-10 col-lg-offset-1">
-      <h1 class="text-center">Startup Name</h1>
-      <p class="lead text-center">tagline to wow visitors and get them to sign up</p>
+      <h1 class="text-center"><%= ENV['TITLE'] %></h1>
+      <p class="lead text-center"><%= ENV['DESCRIPTION'] %></p>
     </div>
   </div>
 
   <%= yield %>
-
 </div>
 
 </body>
