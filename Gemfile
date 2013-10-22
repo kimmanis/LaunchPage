@@ -27,6 +27,7 @@ gem "better_errors", ">= 0.6.0", :group => :development
 
 gem 'lock'
 gem 'figaro'
+gem 'email_validator'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

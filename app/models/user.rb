@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :code, :count, :email
+  validates :email, :email => true
 
   	def generate_code
   		o =  [('a'..'z'),('A'..'Z'),(1...9)].map{|i| i.to_a}.flatten
