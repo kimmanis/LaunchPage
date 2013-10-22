@@ -1,0 +1,7 @@
+ID,Email Address,Date Joined,Referrals
+
+<% @users.each do |user| %>
+
+<%= user.id %>,<%= user.email %>,<%= user.created_at.to_date %>,<%= user.count %>
+
+<% end %>

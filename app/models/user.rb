@@ -13,4 +13,16 @@ class User < ActiveRecord::Base
 		self.count = self.count + 1
 		self.save
 	end
+
+	
+	def self.to_csv(options = {})
+	  CSV.generate(options) do |csv|
+	    csv << column_names
+	    User.all.each do |user|
+	      csv << user.attributes.values_at(*column_names)
+	    end
+	  end
+	end
+
+
 end

@@ -54,6 +54,12 @@
     </div>
 </div>
 
+<p>
+  Download:
+  <%= link_to "CSV", users_path(format: "csv") %> |
+  <%= link_to "Excel", users_path(format: "xls") %>
+</p>
+
 <script>
 Morris.Line({
   element: 'registrations',

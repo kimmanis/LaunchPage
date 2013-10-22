@@ -1,12 +1,12 @@
 class LockController < ApplicationController
 	def unlock
-    @users = User.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @users }
-      format.csv { send_data @users.to_csv }
+    if Lock.passwords_match?(params[:password])
+      session[:lock_opened] = true
+      redirect_to users_path
+    else
+      redirect_to :action=>:login
     end
   end
+
 
 end

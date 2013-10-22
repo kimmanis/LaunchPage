@@ -7,15 +7,17 @@
   <Worksheet ss:Name="Sheet1">
     <Table>
       <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
         <Cell><Data ss:Type="String">Email</Data></Cell>
-        <Cell><Data ss:Type="String">Referrals</Data></Cell>
-        <Cell><Data ss:Type="String">Sign up</Data></Cell>
+        <Cell><Data ss:Type="String">Join Date</Data></Cell>
+        <Cell><Data ss:Type="String">Referral Count</Data></Cell>
       </Row>
-    <% @users.each do |product| %>
+    <% @users.each do |user| %>
       <Row>
-        <Cell><Data ss:Type="Email"><%= product.email %></Data></Cell>
-        <Cell><Data ss:Type="Referrals"><%= product.count %></Data></Cell>
-        <Cell><Data ss:Type="String"><%= product.created_at %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.email %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= user.created_at.to_date %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= user.count %></Data></Cell> 
       </Row>
     <% end %>
     </Table>
