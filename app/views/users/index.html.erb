@@ -1,4 +1,3 @@
-<% @users = User.all %>
 
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3">
@@ -17,7 +16,7 @@
   </div>
   <div class="col-lg-2">
     <div class="panel text-center">
-      <h1><%= User.all.count %></h1>
+      <h1><%= @users.count %></h1>
       <p>REGISTRATIONS</p>
     </div>
   </div>
@@ -41,7 +40,7 @@
               <th>Delete</th>
             </tr>
           </thead>
-        <% for user in @users %>
+        <% @users.each do |user|  %>
           <tr>
             <td><%= user.email %></td>
             <td><%= user.count %></td>
@@ -55,6 +54,11 @@
 </div>
 
 <p>
+  <!--below are the buttons to navigate to next and previous pages -->
+  <%= paginate @users, :remote=>true %>
+</p>
+<p>
+  <!--download link -->
   Download: <%= link_to "Excel", users_path(format: "xls") %>
 </p>
 

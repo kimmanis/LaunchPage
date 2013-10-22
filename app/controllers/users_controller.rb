@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   helper_method :sort_column, :sort_direction
+
   # GET /users
   # GET /users.json
   def index
-    @users = User.order(sort_column + " " + sort_direction)
+    @users = User.order(sort_column + " " + sort_direction).page(params[:page])
    
     respond_to do |format|
       format.html # index.html.erb
@@ -98,7 +99,7 @@ class UsersController < ApplicationController
   private
   
   def sort_column
-    User.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    User.column_names.include?(params[:sort]) ? params[:sort] : "created_at"
   end
   
   def sort_direction

@@ -56,6 +56,9 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.0)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     lock (0.1.0)
       bcrypt-ruby
     mail (2.4.4)
@@ -120,6 +123,7 @@ DEPENDENCIES
   email_validator
   figaro
   jquery-rails
+  kaminari
   lock
   pg
   rails (= 3.2.8)
