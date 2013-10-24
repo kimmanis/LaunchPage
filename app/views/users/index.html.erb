@@ -27,11 +27,14 @@
     </div>
   </div>
 </div>
-
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <%= link_to "Export", users_path(format: "xls"), :class=>"btn btn-default pull-right" %><br /><br />
+    </div>
+</div>
 <div class="row">
     <div class="col-lg-6 col-lg-offset-3">
       <table class="table-hover table-striped users-table pretty" cellpadding="5px" style="width:100%;">
-        <p>
           <thead>
             <tr>
               <th><%= sortable "email", "Email Address" %></th>
@@ -49,18 +52,9 @@
           </tr>
         <% end %>
         </table>
-      </p>
+        <%= paginate @users, :remote=>true %>
     </div>
 </div>
-
-<p>
-  <!--below are the buttons to navigate to next and previous pages -->
-  <%= paginate @users, :remote=>true %>
-</p>
-<p>
-  <!--download link -->
-  Download: <%= link_to "Excel", users_path(format: "xls") %>
-</p>
 
 <script>
 Morris.Line({

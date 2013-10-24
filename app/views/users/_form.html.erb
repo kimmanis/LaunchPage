@@ -1,15 +1,4 @@
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <div class="alert alert-danger"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-      </div>
-    </div>
-  <% end %>
 
   <!-- Sign Up Form -->
   <div class="row">
@@ -17,6 +6,7 @@
       <div class="input-group field">
         <%= f.text_field :email, :class => "form-control signup-form", :placeholder => "Email address" %>
         <%= f.hidden_field :code %>
+        <% if @user.errors.any? %><label class="control-label" for="inputError"><% @user.errors.full_messages.each do |msg| %><%= msg %><% end %></label><% end %>
         <span class="input-group-btn">
           <%= f.submit "Notify me", :class => "btn btn-success signup-button" %>
         </span>
