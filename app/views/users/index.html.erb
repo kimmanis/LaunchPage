@@ -1,28 +1,13 @@
-
 <div class="row">
-  <div class="col-lg-6 col-lg-offset-3">
-    <div class="panel text-center">
-      <div id="registrations"></div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-lg-2 col-lg-offset-3">
-    <div class="panel text-center">
-      <h1>X,XXX</h1>
-      <p>PAGEVIEWS</p>
-    </div>
-  </div>
-  <div class="col-lg-2">
+  <div class="col-lg-3 col-lg-offset-3">
     <div class="panel text-center">
       <h1><%= @users.count %></h1>
       <p>REGISTRATIONS</p>
     </div>
   </div>
-  <div class="col-lg-2">
+  <div class="col-lg-3">
     <div class="panel text-center">
-      <h1>XX</h1>
+      <h1><%= @referrals %></h1>
       <p>REFERRALS</p>
     </div>
   </div>
@@ -52,23 +37,6 @@
           </tr>
         <% end %>
         </table>
-        <%= paginate @users, :remote=>true %>
+        <%= paginate @users %>
     </div>
 </div>
-
-<script>
-Morris.Line({
-  element: 'registrations',
-  data: [
-    { y: '2006', a: 100},
-    { y: '2007', a: 75},
-    { y: '2008', a: 50},
-    { y: '2009', a: 75},
-    { y: '2010', a: 50},
-    { y: '2011', a: 75},
-    { y: '2012', a: 100}
-  ],
-  xkey: 'y',
-  ykeys: ['a'],
-});
-</script>

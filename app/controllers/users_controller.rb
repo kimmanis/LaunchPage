@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.order(sort_column + " " + sort_direction).page(params[:page])
+    @referrals = User.sum("count") 
    
     respond_to do |format|
       format.html # index.html.erb
